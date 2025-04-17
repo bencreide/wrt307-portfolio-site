@@ -1,0 +1,15 @@
+Placeholder Description	Recommended Image Source	Suggested Filename (for /assets/)
+Tired analyst at a desk late at night	Search “tired finance analyst night” on Unsplash or Pexels	analyst-night.jpg
+Professionals networking at a business event	Search “corporate networking” on Pexels or Unsplash	networking-event.jpg
+Excel screenshot showing a complex model	Create a screenshot in Excel using sample financial formulas (DCF/LBO)	excel-model.jpg
+
+
+
+blackstone-call.jpg	Screenshot or visual mockup of a Blackstone earnings call transcript	Create in Google Docs or screenshot from Blackstone’s site
+denmark-protest.jpg	Protest photo referencing Denmark housing issue	Use a royalty-free image from Unsplash or Pexels, search: "urban protest"
+excel-collaboration.jpg	Screenshot of an Excel spreadsheet being edited in real time	Open any financial model and screenshot a collaboration view
+networking-event.jpg	A student or professional networking casually	Search “professional networking” on Pexels or Unsplash
+
+Filename	What to Use
+nyc-finance-skyline.jpg	Royalty-free image of NYC financial district (search on Unsplash or Pexels)
+communication-tips.jpg	A photo of people talking at a networking event or working in a modern office (also available on Unsplash/Pexels)

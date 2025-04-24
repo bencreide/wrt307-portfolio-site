@@ -7,42 +7,99 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header with back‑link -->
   <header>
     <h1>Formatting Assumptions, Inputs, and Formulas for Clarity</h1>
     <nav>
-      <a href="index.html">← Back to Home</a>
+      <a href="excel-examples.html" aria-label="Back to Excel Examples">← Back to Excel Examples</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <p>
-        In fast-paced finance environments, clarity in your Excel models is non-negotiable. Well-formatted spreadsheets
-        allow teammates and senior reviewers to immediately understand what’s editable, what’s calculated, and how the
-        model flows. When everyone’s aligned visually, collaboration is smoother, feedback loops are faster, and revisions
-        are more focused.
+    <!-- Intro paragraph, centered -->
+    <section class="intro">
+      <p style="text-align: center; max-width: 800px; margin: 2rem auto;">
+        “In fast-paced finance environments, how your Excel model looks directly affects how it's understood. 
+        A clean, consistent formatting structure signals professionalism, reduces errors, and helps your 
+        team collaborate quickly.”
       </p>
+    </section>
 
-      <ul>
-        <li>Use blue font for all manual inputs</li>
-        <li>Leave formulas in black font</li>
-        <li>Apply a light gray fill for historicals</li>
-        <li>Bold row and column headers</li>
-        <li>Use consistent number formatting</li>
-        <li>Label your units (e.g., $M, $K)</li>
-      </ul>
+    <!-- Instructional Section -->
+    <section id="instructions">
+      <h2>🛠 Step‑by‑Step Instructions: Build a Properly Formatted Excel Table</h2>
 
-      <figure>
-        <img src="assets/inputs-blue-font.png" alt="Excel inputs in blue font">
-        <figcaption>
-          A 5–6 row Excel section with blue-font inputs, black formulas, gray-filled historicals. Red callouts: “Input”, “Formula”, “Historical Data.”
-        </figcaption>
-      </figure>
+      <!-- Step 1 -->
+      <section id="step1">
+        <h3>Step 1: Set Up a Small Excel Table</h3>
+        <ul>
+          <li>Open a new Excel file.</li>
+          <li>Create a 5×3 table with columns: Year, Revenue Growth (%), and Total Revenue ($M).</li>
+          <li>Fill in years 2020 to 2024 as row headers.</li>
+          <li>Bold the column headers and row labels.</li>
+        </ul>
+        <figure>
+          <img src="assets/excel-step1.jpg" alt="Excel table setup" style="width:100%; max-width:700px;">
+          <figcaption>Basic table setup with bold headers and column structure.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Step 2 -->
+      <section id="step2">
+        <h3>Step 2: Apply Light Gray Fill for Historical Data</h3>
+        <ul>
+          <li>Enter historical revenue numbers (e.g., 200, 215, 230 for 2020–2022).</li>
+          <li>Fill those cells with a light gray background.</li>
+          <li>Keep the font color black.</li>
+        </ul>
+        <figure>
+          <img src="assets/excel-step2.jpg" alt="Historical data formatting" style="width:100%; max-width:700px;">
+          <figcaption>Historical revenue cells filled gray to separate actuals from forecasts.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Step 3 -->
+      <section id="step3">
+        <h3>Step 3: Add Manual Inputs in Blue Font</h3>
+        <ul>
+          <li>In the Revenue Growth (%) column for 2023 and 2024, enter projected values (e.g., 6.0%, 7.0%).</li>
+          <li>Format those cells with blue font.</li>
+        </ul>
+        <figure>
+          <img src="assets/excel-step3.png" alt="Blue input formatting" style="width:100%; max-width:700px;">
+          <figcaption>Manual inputs in blue font clearly distinguish editable assumptions.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Step 4 -->
+      <section id="step4">
+        <h3>Step 4: Add Formulas in Black Font</h3>
+        <ul>
+          <li>Calculate 2023 Revenue using a formula like <code>=C4*(1+B5)</code>.</li>
+          <li>Drag the formula down to 2024.</li>
+          <li>Leave font color black to signal these are formulas.</li>
+        </ul>
+        <figure>
+          <img src="assets/excel-step4.png" alt="Formula formatting in black" style="width:100%; max-width:700px;">
+          <figcaption>Calculated revenue using black font for clarity.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Closing Callout -->
+      <section class="callout">
+        <blockquote style="border-left: 4px solid #D44500; padding-left:1rem; color:#0D2C54; margin:2rem 0;">
+          “This formatting structure is used across the finance industry to ensure clean handoffs, faster review, 
+          and better communication. If someone opens your model with no context, they should know what to edit — 
+          and what not to.”
+        </blockquote>
+      </section>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Your Name</p>
+    <p>© 2025 Benjamin Campbell-Reide</p>
   </footer>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,41 +8,89 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header with Back Link -->
   <header>
     <h1>Responding to Comments from a VP in an Excel Model</h1>
     <nav>
-      <a href="index.html">← Back to Home</a>
+      <a href="excel-examples.html" class="back-link">← Back to Excel Examples</a>
     </nav>
   </header>
 
   <main>
-    <section>
+    <!-- Intro Paragraph -->
+    <section class="overview-label intro">
       <p>
-        Analysts are regularly asked to revise models based on comments left by senior team members. How clearly you
-        interpret and reflect those revisions can directly impact turnaround time, deal clarity, and trust in your work.
-        Addressing comments cleanly keeps projects moving and avoids confusion or double work.
+        “Analysts are regularly expected to revise Excel models in response to feedback from senior team members. 
+        These comments might appear as in-line notes, comment balloons, or instructions in Slack. How you interpret, 
+        implement, and communicate these changes reflects your professionalism and directly impacts turnaround time, 
+        clarity, and trust.”
       </p>
-
-      <ul>
-        <li>Read each comment carefully before taking action</li>
-        <li>Make the requested change directly in the model</li>
-        <li>Leave a brief note or reply comment where applicable</li>
-        <li>If clarification is needed, note that too</li>
-        <li>Mark resolved comments clearly</li>
-        <li>Summarize updates when sharing the model</li>
-      </ul>
-
-      <figure>
-        <img src="assets/vp-comment-response.png" alt="VP comment and analyst response">
-        <figcaption>
-          Two comment balloons: one with VP instruction (“Update exit cap to 5.5%”), one with analyst note. The updated cell visible. Highlights: original comment, updated value, analyst response.
-        </figcaption>
-      </figure>
     </section>
+
+    <!-- Instructional Steps -->
+    <section class="steps">
+      
+      <section id="step1">
+        <h2>Step 1: Read Each Comment Carefully</h2>
+        <p>Before doing anything, read the comment twice. Ask:</p>
+        <ul>
+          <li>Is it a question or a directive?</li>
+          <li>What exactly is being requested?</li>
+        </ul>
+        <p><strong>Example:</strong><br>
+           VP writes: “Should we increase the exit cap to 5.5% based on the new comp set?”<br>
+           This is not a direct instruction — it’s a prompt to consider and verify.</p>
+      </section>
+
+      <section id="step2">
+        <h2>Step 2: Make the Requested Change in the Model</h2>
+        <p>Apply the change precisely and confirm that formulas update downstream.</p>
+        <p><strong>Example:</strong><br>
+           You update the exit cap from 5.0% to 5.5% in the assumptions tab and verify it flows through to the valuation.</p>
+      </section>
+
+      <section id="step3">
+        <h2>Step 3: Leave a Brief Reply or Note Near the Change</h2>
+        <p>Use a reply comment or nearby note to confirm what you did.</p>
+        <p><strong>Example:</strong><br>
+          “Updated exit cap to 5.5% as discussed — see changes reflected in row 130.”</p>
+      </section>
+
+      <section id="step4">
+        <h2>Step 4: Ask for Clarification if Needed</h2>
+        <p>If you’re unsure, flag it with a note or message the reviewer.</p>
+        <p><strong>Example:</strong><br>
+          “Used 5.5% based on IR team comp set — happy to revert if needed.”</p>
+      </section>
+
+      <section id="step5">
+        <h2>Step 5: Mark Comments as Resolved</h2>
+        <ul>
+          <li>Click “Resolve” (in threaded comments)</li>
+          <li>Or delete the comment after you’ve responded</li>
+        </ul>
+        <p>Avoid leaving resolved comments visible.</p>
+      </section>
+
+      <section id="step6">
+        <h2>Step 6: Summarize Updates When Sharing the File</h2>
+        <p>When you send the file back, provide a bullet summary:</p>
+        <pre><code>Changes made to Investor Model v3.1:
+• Updated exit cap to 5.5% (Tab 2, Row 130)
+• Corrected IRR calc for updated NOI
+• Recolored historicals for consistency</code></pre>
+      </section>
+
+    </section>
+
+
   </main>
 
   <footer>
-    <p>© 2025 Your Name</p>
+    <p>© 2025 Benjamin Campbell-Reide</p>
   </footer>
+
 </body>
 </html>
+```

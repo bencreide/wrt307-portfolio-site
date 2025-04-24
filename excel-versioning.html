@@ -7,41 +7,83 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>Sharing the Right Version of a Model with Your Team</h1>
     <nav>
-      <a href="index.html">← Back to Home</a>
+      <a href="excel-examples.html" class="back-link">← Back to Excel Examples</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <p>
-        With models constantly evolving, file versioning can quickly spiral into confusion. Keeping your model structure
-        and communication clean prevents costly errors and streamlines collaboration. A clearly named file and a quick
-        summary note can save everyone time — especially when speed matters.
+    <!-- Intro -->
+    <section class="overview-label intro">
+      <p style="text-align:center; max-width:800px; margin:2rem auto;">
+        “With models constantly evolving, file versioning can quickly spiral into confusion. Keeping your model 
+        structure and communication clean prevents costly errors and streamlines collaboration. A clearly named 
+        file and a quick summary note can save everyone time — especially when speed matters.”
       </p>
-
-      <ul>
-        <li>Set up a folder to store all model versions</li>
-        <li>Use a consistent, descriptive naming format</li>
-        <li>Never overwrite a “FINAL” model</li>
-        <li>When sharing, always state which file is the active version</li>
-        <li>Include a short list of key changes</li>
-        <li>Move older versions into an archive folder</li>
-      </ul>
-
-      <figure>
-        <img src="assets/model-version-folder.png" alt="Folder with model versions and Slack message">
-        <figcaption>
-          A folder window with files like <code>Model_v2.0.xlsx</code>, <code>Model_FINAL.xlsx</code>, <code>Model_FINAL_v3.1_EDITED.xlsx</code>. Plus a Slack message: “Latest version is v3.2 with updated tax assumptions.”
-        </figcaption>
-      </figure>
     </section>
+
+    <!-- Instructional Steps -->
+    <section class="steps">
+      <section id="step1">
+        <h2>Step 1: Set Up a Dedicated Folder for Model Versions</h2>
+        <p>Create a clearly labeled folder for your model files.</p>
+        <p><strong>Example:</strong> <code>/Investor_Model_Versions/</code></p>
+      </section>
+
+      <section id="step2">
+        <h2>Step 2: Use a Clear, Descriptive Naming Format</h2>
+        <p>Avoid generic names. Include file purpose, version number, and status.</p>
+        <ul>
+          <li><code>InvestorModel_v1.2.xlsx</code></li>
+          <li><code>InvestorModel_FINAL_v3.0.xlsx</code></li>
+          <li><code>InvestorModel_FINAL_v3.1_EDITED.xlsx</code></li>
+        </ul>
+      </section>
+
+      <section id="step3">
+        <h2>Step 3: Never Overwrite a Final Version</h2>
+        <p>If a file is marked FINAL, duplicate it and rename the copy before editing.</p>
+      </section>
+
+      <section id="step4">
+        <h2>Step 4: Always Communicate Which Version Is Active</h2>
+        <p>Use Slack, email, or shared folder notes to specify the active file.</p>
+        <p><strong>Example Slack message:</strong><br>
+          “Use <code>InvestorModel_FINAL_v3.2.xlsx</code> — updated tax assumptions included.”
+        </p>
+      </section>
+
+      <section id="step5">
+        <h2>Step 5: Include a Short List of Key Changes</h2>
+        <p>Provide a summary of what changed when you share the file.</p>
+        <ul>
+          <li>Updated cap rate</li>
+          <li>Revised terminal value logic</li>
+          <li>Fixed IRR on Tab 4</li>
+        </ul>
+      </section>
+
+      <section id="step6">
+        <h2>Step 6: Archive Older Versions</h2>
+        <p>Move outdated files to an <code>Archive</code> subfolder to reduce clutter.</p>
+        <pre><code>/Investor_Model_Versions/
+├── Archive/
+│   ├── InvestorModel_v1.0.xlsx
+│   ├── InvestorModel_v2.0.xlsx
+└── InvestorModel_FINAL_v3.2.xlsx
+</code></pre>
+      </section>
+    </section>
+
+
   </main>
 
   <footer>
-    <p>© 2025 Your Name</p>
+    <p>© 2025 Benjamin Campbell-Reide</p>
   </footer>
+
 </body>
 </html>

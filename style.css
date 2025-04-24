@@ -193,6 +193,25 @@ figcaption {
 .card--context {
   background-image: url('assets/context-placeholder.jpg');
 }
+.card--ex1 {
+  background-image: url('assets/excel_logo.jpeg');
+}
+.card--ex2 {
+  background-image: url('assets/scenario2.jpg');
+}
+.card--ex3 {
+  background-image: url('assets/scenario3.jpg');
+}
+/* Excel Examples Card Backgrounds */
+.card--excel-formatting {
+  background-image: url('assets/excel_logo.jpeg');
+}
+.card--excel-feedback {
+  background-image: url('assets/excel-comments.jpg');
+}
+.card--excel-versioning {
+  background-image: url('assets/excel_logo.jpeg');
+}
 
 /* Footer */
 footer {
@@ -217,5 +236,279 @@ footer p {
   }
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+/* Highlighted Intro / Feature Blocks */
+.site-intro,
+.homepage-intro {
+  background-color: rgba(13, 44, 84, 0.05);   /* light navy overlay */
+  border-left: 6px solid var(--color-primary);/* SU orange accent */
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 960px;
+}
+
+/* Ensure headings inside look sharp */
+.site-intro h2,
+.homepage-intro h2 {
+  color: var(--color-secondary);  /* SU navy */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Constrain body text width and space out paragraphs */
+.site-intro p,
+.homepage-intro p {
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+/* Popup-card hover effect for the two intro blocks */
+.site-intro,
+.homepage-intro {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.site-intro:hover,
+.homepage-intro:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(13,44,84,0.2);
+  z-index: 10;
+}
+/* Expandable Intro Cards */
+details.intro-card {
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  background-color: var(--color-muted);
+  max-width: 960px;
+  margin: 2rem auto;
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  cursor: pointer;
+}
+details.intro-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 24px var(--color-shadow);
+}
+
+/* Summary as card header */
+details.intro-card > summary {
+  list-style: none;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+details.intro-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Divider between summary and content when open */
+details.intro-card[open] > summary {
+  border-bottom: 1px solid var(--color-muted);
+}
+
+/* Hidden by default, revealed when open */
+details.intro-card .card-content {
+  padding: 1rem 1.5rem;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+/* Highlighted “Communicating with Investors” block */
+.highlight-box {
+  background-color: #FFF4ED;          /* light orange background */
+  border-left: 4px solid #0D2C54;     /* navy blue accent */
+  padding: 1.5rem;                    /* internal spacing */
+  border-radius: 8px;                 /* rounded corners */
+  color: #333333;                     /* darker text for readability */
+}
+/* Clean, white titles on communication scenario cards */
+.card--scenario .card__overlay h4 {
+  color: #ffffff;                   /* force white text */
+  font-family: var(--font-heading); /* same heading font as site */
+  font-size: 1.25rem;               /* adjust as desired */
+  font-weight: 600;                 /* semi-bold */
+  text-transform: none;             /* no uppercase */
+  letter-spacing: 0;                /* normal spacing */
+  text-shadow: none;                /* remove any glow */
+  transition: transform 0.2s ease;  /* smooth hover */
+}
+
+/* Slight scale-up on card hover */
+.card--scenario:hover .card__overlay h4 {
+  transform: scale(1.05);
+}
+/* ============================================
+   Instructional Steps (excel-feedback & versioning)
+   ============================================ */
+   .steps section {
+    background-color: #F0F4F8;               /* pale blue tint */
+    border-left: 4px solid #0D6CA8;          /* left accent ribbon */
+    padding: 1.25rem 1.5rem;                 /* internal spacing */
+    margin-bottom: 1.5rem;                   /* separation */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);   /* soft shadow */
+    border-radius: 4px;
+  }
+  .steps section h2 {
+    font-weight: 700;                        /* bold */
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  .steps section h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-secondary); /* navy underline */
+    margin-top: 0.3rem;
+    border-radius: 2px;
+  }
+  
+  /* ============================================
+     Code Blocks (<pre> & <code>)
+     ============================================ */
+  pre, code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+  pre {
+    background-color: #F4F4F4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  code {
+    background-color: #F4F4F4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+  }
+  
+  /* ============================================
+     Lists inside steps
+     ============================================ */
+  .steps ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .steps ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .steps ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary); /* SU orange */
+  }
+  
+  /* ============================================
+     Overview Label (top of page)
+     ============================================ */
+  .overview-label {
+    background-color: #F7F8FA;                  /* soft pastel */
+    border-left: 5px solid var(--color-primary); /* SU orange */
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+  }
+  .overview-label h2 {
+    color: var(--color-secondary);              /* navy */
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .overview-label p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  
+  /* ============================================
+     Responsive tweaks
+     ============================================ */
+  @media (max-width: 600px) {
+    .steps section,
+    .overview-label {
+      padding: 1rem;
+    }
+  }
+  /* Final Example Message Styling */
+.final-example {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+.final-example h2 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Annotated Message Container */
+.annotated-message p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+/* Highlighted segments */
+.highlight {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+/* Use SU colors with low opacity tints */
+.highlight-intro {
+  background-color: rgba(212, 69, 0, 0.15);    /* SU orange tint */
+}
+.highlight-exp {
+  background-color: rgba(13, 44, 84, 0.15);    /* SU navy tint */
+}
+.highlight-conn {
+  background-color: rgba(212, 69, 0, 0.10);
+}
+.highlight-prompt {
+  background-color: rgba(13, 44, 84, 0.10);
+}
+.highlight-signoff {
+  background-color: rgba(212, 69, 0, 0.05);
+}
+
+/* Annotation Tags */
+.annotation-tag {
+  display: inline-block;
+  margin-left: 0.75rem;
+  margin-top: 0.25rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: var(--font-body);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .annotated-message p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .annotation-tag {
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
 }
